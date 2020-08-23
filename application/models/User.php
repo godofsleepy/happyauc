@@ -24,4 +24,9 @@ class User extends Ci_model
         $data = $this->db->get('user');
         return $data->result();
     }
+
+    function check_login($where)
+    {
+        return $this->db->get_where('user', $where);
+    }
 }

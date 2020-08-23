@@ -57,12 +57,12 @@
         <div style="margin-top: 12rem" class="text-center">
             <p class="h3">Login</p>
             <br>
-            <form>
+            <form action="<?php echo site_url('login/actionlogin') ?>" method="POST">
                 <div class="form-group text-center">
                     <di class="d-flex justify-content-center row">
                         <div class="col-md-4">
                             <label for="exampleInsputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                     </di>
 
@@ -70,7 +70,7 @@
                     <div class="d-flex justify-content-center row">
                         <div class="col-md-4">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                         </div>
                     </div>
 
