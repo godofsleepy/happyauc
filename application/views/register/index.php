@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>HappyAuc:)</title>
+    <link rel="shortcut icon" href="../asset/img/H).png" />
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <!-- Nav -->
         <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
             <a class="navbar-brand" href="#">
-                <img src="./asset/img/logo.png" width="120" alt="" loading="lazy">
+                <img src="../asset/img/logo.png" width="120" alt="" loading="lazy">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
                 <span class="navbar-toggler-icon"></span>
@@ -32,11 +33,11 @@
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            home</a>
+                            Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            list
+                            List
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Action</a>
@@ -45,10 +46,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">about</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: black;"><b><i>login</i></b></a>
+                        <a class="nav-link" href="#" style="color: black;"><b><i>Login</i></b></a>
                     </li>
                 </ul>
             </div>
@@ -72,27 +73,11 @@
                         <label for="password">Password</label>
                         <input name="password" type="password" class="form-control" id="password">
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-md-6">
                         <label for="inputState">Date Birth</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                        <input name="datebirth" type="date" placeholder="DD" class="form-control" id="idcard">
                     </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputState">.</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputState">.</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
+
 
                 </div>
                 <div class="form-row">
@@ -123,24 +108,11 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputState">Expire</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                        <input name="monthcard" type="number" placeholder="MM" class="form-control" id="idcard">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputState">.</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputState">CVV</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                        <input name="yearcard" type="number" placeholder="YY" class="form-control" id="idcard">
                     </div>
                 </div>
 

@@ -15,11 +15,8 @@ class Register extends CI_Controller
 	public function insert()
 	{
 		$this->User->insert_data();
+		redirect(base_url("login"));
 	}
 
-	public function read()
-	{
-		$data["users"] = $this->User->get_users();
-		$this->load->view("table/index", $data);
-	}
+
 }

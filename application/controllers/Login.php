@@ -9,30 +9,40 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('login/index');
+		if ($this->session->userdata('status') == 'login') {
+			$data['status'] = 'login';
+			$this->load->view('component/header', $data);
+			$this->load->view('login/index');
+			$this->load->view('component/footer');
+		} else {
+			$data['status'] = '';
+			$this->load->view('component/header', $data);
+			$this->load->view('login/index');
+			$this->load->view('component/footer');
+		}
 	}
 
 	public function actionlogin()
 	{
 		$email = $this->input->post('email');
-		$password = $this->input->post('password');
+		$password = md5($this->input->post('password'));
 
 		$where = array(
 			'email' => $email,
 			'password' => $password
 		);
 
-		$cek = $this->User->check_login($where)->num_rows();
+		$user = $this->User->check_login($where);
 
-		if ($cek > 0) {
+		if (!empty($user)) {
 			$data_session = array(
-				'email' => $email,
+				'id' => $user[0]->id,
 				'status' => "login"
 			);
 
 			$this->session->set_userdata($data_session);
 
-			redirect(base_url("detail"));
+			redirect(base_url("home"));
 		} else {
 			echo "Username dan password salah !";
 		}

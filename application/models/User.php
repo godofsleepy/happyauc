@@ -5,15 +5,15 @@ class User extends Ci_model
     {
         $data = array(
             'email' => $this->input->post('email'),
-            'password' => $this->input->post('password'),
+            'password' => md5($this->input->post('password')),
             'name' => $this->input->post('name'),
             'phone' => $this->input->post('phone'),
             'address' => $this->input->post('address'),
             'idcard' => $this->input->post('idcard'),
-            // 'datebirth' => $this->input->post('datebirth'),
+            'datebirth' => $this->input->post('datebirth'),
             'creditcard' => $this->input->post('creditcard'),
-            'cardholder' => $this->input->post('cardholder')
-            // 'expire' => $this->input->post('expire')
+            'cardholder' => $this->input->post('cardholder'),
+            'expire' => $this->input->post('monthcard') . "/" . $this->input->post('yearcard')
         );
 
         $this->db->insert('user', $data);
@@ -27,6 +27,7 @@ class User extends Ci_model
 
     function check_login($where)
     {
-        return $this->db->get_where('user', $where);
+        $data =  $this->db->get_where('user', $where);
+        return $data->result();
     }
 }
